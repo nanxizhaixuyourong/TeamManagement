@@ -1,0 +1,98 @@
+
+div,h1,h2,h3,h4,h5,hr,ul,li{
+	padding:0;
+	margin:0;
+}
+a{
+	color:#039;
+}
+
+ul{
+	font-weight:bold;
+	font-size:13px;
+	color:#000;
+}
+li{
+	float:left;
+	font-size:13px;
+	font-weight:normal;
+	margin-left:5px;
+	list-style:none;
+}
+#map .news ul li{float:none;color:#666;font-size:12px;}
+li.yes{
+	font-weight:normal;
+	color:#f00;
+}
+li.yes a{
+	color:#F00;
+}
+.clear{
+	clear:both;
+}
+#copy{
+	height:120px;
+	text-align:center;
+}
+#copy a{
+	color:#036;
+	text-decoration:none;
+}
+#cities{
+	border-top:1px solid #FFF;
+	margin-top:20px;
+	/*padding-top:10px;*/
+	background:#e7f3ff;
+	border-right:1px #f7f7f7 solid;
+}
+#cities hr{border:1px solid #fff;}
+#map #left{
+	float:left;
+	width:180px;
+	min-height:280px;
+	_height:280px;
+	line-height:30px;
+	text-align:right;
+	padding-right:5px;
+	border-right:2px solid #ccc;
+}
+#left a{
+	color:#03F;
+	text-decoration:underline;
+	font-size:9px;
+}
+#left a:hover{
+	color:#333;
+}
+#left h2{
+	color:#F00;
+}
+#map #neirong{
+	padding:80px;
+	padding-top:0;
+	margin-left:180px;
+}
+#map #neirong p{
+	text-indent:2em;
+}
+#neirong .input{
+	border:1px solid #ccc;
+}
+#neirong li{
+	margin-top:10px;
+	float:none;
+	color:#003399;
+}
+#neirong .links li{
+	width:120px;
+	height:40px;
+	line-height:40px;
+	margin-top:5px;
+	float:left;
+}
+.hide{display:none;}
+.sheng{float:left;width:46%;_width:45%;height:50px;border:1px solid #adcfef;margin:10px;_margin:10px;padding:5px;font-size:14px;font-weight:bold;background:#fff;}
+.sheng ul li{font-weight:normal;}
+.sheng ul .yes a{font-weight:normal;}
+.up{padding-bottom:8px;background:url(images/yes2.gif) no-repeat 50% 100%;}
+

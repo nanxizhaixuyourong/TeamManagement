@@ -1,0 +1,396 @@
+body {
+	margin: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#FFFFFF;
+	background-position:center;
+}
+ img{   
+  border:0px   none;   
+  } 
+body,td,th {
+	font-size: 12px;
+	color: #000000;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+	
+}
+a:visited {
+	text-decoration:none;
+	color: #000000;
+}
+a:hover {
+	text-decoration:underline;
+	color: #000000;
+}
+
+
+
+a:active {
+	text-decoration: none;
+	color: #000000;
+
+}
+
+.i-001 {/*导航*/
+	font-size: 12px;
+	color: #FFFFFF;
+	padding-top: 2px;
+}
+.i-001 a {/*导航*/
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.i-001 a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+.i-001 a:visited {
+	text-decoration:none;
+	color: #ffffff;
+}
+.i-001 a:hover {
+	text-decoration:underline;
+	color: #FFFF00;
+}
+.i-001 a:active {
+	text-decoration: none;
+	color: #ffffff;
+
+}
+.i-002 {/*导航*/
+	font-size: 12px;
+	color: #FF6600;
+	padding-left: 5px;
+	font-weight: bold;
+}
+.i-002 a {/*导航*/
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+.i-002 a:link {
+	color: #000000;
+	text-decoration: none;
+}
+.i-002 a:visited {
+	text-decoration:none;
+	color: #000000;
+}
+.i-002 a:hover {
+	text-decoration:underline;
+	color: #000000;
+}
+.i-002 a:active {
+	text-decoration: none;
+	color: #000000;
+	test:expression(target="_blank");
+}
+.i-003 {/*导航*/
+	font-size: 12px;
+	color: #666666;
+	padding-left:5px;
+	line-height: 20px
+}
+.i-003 a {/*导航*/
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+.i-003 a:link {
+	color: #666666;
+	text-decoration: none;
+}
+.i-003 a:visited {
+	text-decoration:none;
+	color: #666666;
+}
+.i-003 a:hover {
+	text-decoration:underline;
+	color: #666666;
+}
+.i-003 a:active {
+	text-decoration: none;
+	color: #666666;
+	test:expression(target="_blank");
+}
+.i-004 {/*导航*/
+	font-size: 12px;
+	color: #666666;
+	padding-left:0px;
+}
+.i-004 a:link {
+	color: #666666;
+	text-decoration: none;
+}
+.i-004 a:visited {
+	text-decoration:none;
+	color: #666666;
+}
+.i-004 a:hover {
+	text-decoration:underline;
+	color: #666666;
+}
+.i-004 a:active {
+	text-decoration: none;
+	color: #666666;
+	test:expression(target="_blank");
+}
+.i-007 {/*导航*/
+	font-size: 12px;
+	color: #FB5D06;
+	padding-left:0px;
+}
+.i-007 a:link {
+	color: #FB5D06;
+	text-decoration: none;
+}
+.i-007 a:visited {
+	text-decoration:none;
+	color: #FB5D06;
+}
+.i-007 a:hover {
+	text-decoration:underline;
+	color: #FB5D06;
+}
+.i-007 a:active {
+	text-decoration: none;
+	color: #FB5D06;
+	test:expression(target="_blank");
+}
+.i-008 {/*导航*/
+	font-size: 12px;
+	color: #0566AB;
+	padding-left:0px;
+}
+.i-008 a:link {
+	color: #0566AB;
+	text-decoration: none;
+}
+.i-008 a:visited {
+	text-decoration:none;
+	color: #0566AB;
+}
+.i-008 a:hover {
+	text-decoration:underline;
+	color: #0566AB;
+}
+.i-008 a:active {
+	text-decoration: none;
+	color: #0566AB;
+	test:expression(target="_blank");
+}
+.i-009 {/*导航padding-left:30px;*/
+	font-size: 12px;
+	color: #666666;
+	
+}
+.i-009 a:link {
+	color: #666666;
+	text-decoration: none;
+}
+.i-009 a:visited {
+	text-decoration:none;
+	color: #666666;
+}
+.i-009 a:hover {
+	text-decoration:underline;
+	color: #666666;
+}
+.i-009 a:active {
+	text-decoration: none;
+	color: #666666;
+	test:expression(target="_blank");
+}
+.i-010 {/*导航*/
+	font-size: 14px;
+	color: #000066;
+	padding-left: 5px;
+	font-weight: bold;
+}
+.i-010 a {/*导航*/
+	font-size: 14px;
+	color: #000066;
+	text-decoration: none;
+}
+.i-010 a:link {
+	color: #000066;
+	text-decoration: none;
+}
+.i-010 a:visited {
+	text-decoration:none;
+	color: #000066;
+}
+.i-010 a:hover {
+	text-decoration:underline;
+	color: #000066;
+}
+.i-010 a:active {
+	text-decoration: none;
+	color: #000066;
+	test:expression(target="_blank");
+}
+.i-006 {/*导航*/
+	font-size: 12px;
+	color: #FF6600;
+	padding-left: 12px;
+	font-weight: bold;
+}
+.ggg {
+	line-height: 23px;
+}
+.TDbottom {
+	border-bottom-style:dashed; border-bottom-width:1px; border-bottom-color:#CCCCCC; 
+}
+.i-005 INPUT  {   
+  font-size:   10pt;   
+  color:   black;   
+  background-color:   #ffffff;   
+  border-right:   #7A7E7F   1px   solid;   
+  border-top:    #7A7E7F   1px   solid;   
+  border-left:    #7A7E7F   1px   solid;   
+  border-bottom:    #7A7E7F   1px   solid;
+  height:23px;
+  }
+   INPUT  {   
+  font-size:   10pt;   
+  color:   black;   
+  background-color:   #ffffff;   
+  border-right:   #A3B6C5   1px   solid;   
+  border-top:    #A3B6C5   1px   solid;   
+  border-left:    #A3B6C5   1px   solid;   
+  border-bottom:    #A3B6C5   1px   solid;
+  height:20px;
+  }
+
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {	color: #FF0000;
+	font-size: 25px;
+	font-weight: bold;
+}
+.STYLE5 {font-size: 14px}
+.STYLE5 a {/*导航*/
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+.STYLE5 a:link {
+	color: #000000;
+	text-decoration: none;
+}
+.STYLE5 a:visited {
+	text-decoration:none;
+	color: #000000;
+}
+.STYLE5 a:hover {
+	text-decoration:underline;
+	color: #000000;
+}
+.STYLE5 a:active {
+	text-decoration: none;
+	color: #000000;
+	test:expression(target="_blank");
+}
+.line {	
+border-left: 1 solid #DFE0E2; border-right: 1 solid #DFE0E2;border-top: 1 solid #DFE0E2;border-bottom: 1 solid #DFE0E2;
+}
+.paginator { color:#000000;font: 11px Arial, Helvetica, sans-serif;padding:10px 20px 10px 0; margin: 0px;}
+.paginator a {padding: 1px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;margin-right:2px}
+.paginator a:visited {color:#000000;padding: 1px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+.paginator .cpb {color:#000000;padding: 1px 6px;font-weight: bold; font-size: 13px;border:none}
+.paginator a:hover {color: #000000; border-color:#055f5f;text-decoration: none;}
+
+
+
+/*主导航菜单*/
+
+
+
+
+#nav li{
+	float:left;
+ border:1px;
+
+}
+#nav li a{
+	float:left;
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+
+
+#nav li a span{/*导航*/
+	float:left;
+	padding:11px 13px 8px 8px;
+}
+
+#nav li a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+#nav li a:visited {
+	text-decoration:none;
+	color: #ffffff;
+}
+#nav li a:hover {
+	text-decoration:underline;
+	color: #FFFF00;
+}
+#nav li a:active {
+	text-decoration: none;
+	color: #ffffff;
+	test:expression(target="_blank");
+}
+
+
+
+/*子栏目*/
+#menu_con{
+	text-align:left;
+	padding-left:-1px;
+	clear:both;
+}
+#menu_con li{
+	float:left;
+	height:20px;
+
+}
+
+#menu_con li a span{
+
+	padding:6px 10px 4px 10px;
+
+
+}
+
+
+#menu_con  li a:link 
+{	
+	float:left;
+	cursor:pointer;
+	padding-left:3px;
+
+	text-decoration: none;
+}
+#menu_con  li a:visited {
+	text-decoration:none;
+
+}
+#menu_con  li a:hover {
+	text-decoration:underline;
+
+
+}
+#menu_con  li a:active {
+	text-decoration: none;
+	test:expression(target="_blank");
+	
+}

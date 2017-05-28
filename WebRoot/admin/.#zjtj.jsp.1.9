@@ -1,0 +1,151 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@page import="common.PageManager"%>
+<%@page import="common.CommDAO"%>
+<%@page import="entitydao.SysusersDAO"%>
+<%@page import="common.Info"%>
+<%
+Info.isLogin(request,response);
+ %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/lottery/commfiles/css/common.css" /> 
+	<link rel="stylesheet" type="text/css" href="/lottery/commfiles/css/style.css" /> 
+	<script type="text/javascript" src="/lottery/commfiles/js/calendar/WdatePicker.js"></script>
+	<script type="text/javascript" src="/lottery/commfiles/js/popup.js"></script>
+  </head>
+  <%
+   String lotname = request.getParameter("lotname")==null?"":request.getParameter("lotname");
+  String yxdate = request.getParameter("yxdate")==null?"":request.getParameter("yxdate");
+  String esn = request.getParameter("esn")==null?"":request.getParameter("esn");
+  lotname = lotname.trim();
+  esn = esn.trim();
+  String url = "zjtj.jsp?1=1";
+  String sql = "select distinct  c.id,c.lotname from lotterys c,LOTPRIZE b  where c.id=b.lotitd ";
+  
+  if(!lotname.equals(""))
+  {
+  url+="&lotname="+lotname;
+  sql+=" and c.lotname like '%"+lotname+"%' ";
+  }
+  if(!yxdate.equals("")){
+  url+="&yxdate="+yxdate;
+  sql+=" and c.yxdate <= '"+yxdate+"' ";
+  }
+  
+  if(!esn.equals("")){
+  url+="&esn="+esn;
+  sql+=" and (b.ZJNOS like'%"+esn+"%' ) ";
+  }
+  
+  
+  sql+="  order by c.id desc";
+  PageManager pageManager = PageManager.getPage(url, 10, request);
+  pageManager.doList(sql);
+  PageManager bean = (PageManager) request.getAttribute("page");
+  ArrayList<HashMap> nlist = (ArrayList) bean.getCollection();
+   %>
+  <body>
+  	<!-- cellspacing 是单元格之间的距离、cesspadding 是单元格中内容与边框的距离 -->
+  	<form name="f1" method="post" action="/lottery/pages/zjtj.jsp" >
+  	<table id="mainbody" border="0" width="100%" cellspacing="1"
+					class="tableform">
+			<tr>
+     				 <td width=10% height="31" align="center" style="font-size: 12px">活动名称&nbsp;:</td>
+	                 <td width=14% style="font-size: 12px" align="left"><input name="lotname" value="<%=lotname %>" type="text"></td>
+					<td width=10% align="center" style="font-size: 12px">有效期截止&nbsp;:</td>
+					<td width=12% style="font-size: 12px" align="left"><input value="<%=yxdate %>" onclick="WdatePicker();" name="yxdate" size="12" type="text"></td>
+					<td width=10% align="center" style="font-size: 12px">esn号&nbsp;:</td>
+					<td width=12% style="font-size: 12px" align="left"><input value="<%=esn %>"  name="esn" size="18" type="text"></td>
+					
+					
+					
+					
+					<td width=20% style="font-size: 12px" align="right"><input type="submit" class="btn3_mouseup" value="查询">&nbsp;&nbsp;</td>
+			</tr>
+			</table>
+  	
+  	
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytab" id="table1">
+<tr align="center">
+          <td colspan="3"  background="/lottery/commfiles/images/bg.gif"
+				bgcolor="#FFFFFF" class="STYLE3">抽奖活动列表</td>
+        </tr>
+        <tr align="center">
+          <td  class="itemtitle"  width="20%"> 活动名称</td>
+          <td class="itemtitle" colspan="2"> 统计 </td>
+          
+          
+  </tr>
+        
+         <%
+  for(HashMap map:nlist)
+  {
+  String filename = (String)(map.get("filename")==null?"":map.get("filename"));
+    %>
+ <tr align="center">
+         <td align="center" > <%=map.get("lotname").equals("")?"&nbsp;":map.get("lotname") %> </td>
+         <td align="left">
+         
+         <%
+         String sql0 = "select * from lotprize where lotitd = '"+map.get("id")+"'"; 
+         CommDAO d = new CommDAO();
+         List<HashMap> list0 = d.select(sql0);
+          for(HashMap map0:list0){
+          %>
+         <%=map0.get("prizetitle") %>:<%=map0.get("prizename") %>&nbsp;&nbsp;&nbsp;&nbsp;
+         <font color=orange>中奖esn:<%=map0.get("zjnos").toString().substring(1) %></font><br />
+          
+  		<% }%>
+        
+		</td>
+ </tr>
+        <%} %>
+        
+
+        
+        
+        <tr align="center">
+        
+        
+        <%session.setAttribute("sql",sql); %>
+        
+          <td align="right" colspan="13"><a href="/lottery/sys.do?action=downFile&sql= <%=sql %>;">导出</a>&nbsp;&nbsp; ${page.info } </td>
+        </tr>
+      </table>
+      </form>
+      
+</body>
+</html>
+<%
+if(request.getAttribute("suc")!=null)
+{
+ %>
+ <script type="text/javascript">
+<!--
+alert("操作成功")
+//-->
+</script>
+<%}%>
+
+
+<script language="JavaScript"> 
+function highlight(key) { 
+var key = key.split('|'); 
+for (var i=0; i<key.length; i++) { 
+var rng = document.body.createTextRange(); 
+while (rng.findText(key[i])) 
+//rng.pasteHTML(rng.text.fontcolor('red')); 
+rng.pasteHTML('<div style="border:1 solid red;display:inline"><a href="#" title='+ rng.text +'>' + rng.text + '</a></div>'); 
+} 
+} 
+
+<%
+if(!esn.equals(""))
+{
+%>
+highlight('<%=esn%>') 
+
+<%}%>
+</script>
